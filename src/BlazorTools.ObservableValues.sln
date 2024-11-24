@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35514.174
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTools.ObservableValues.Sample1", "BlazorTools.ObservableValues.Sample1\BlazorTools.ObservableValues.Sample1.csproj", "{BD2E30ED-C8F0-4425-A884-0508AF65DD3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorTools.ObservableValues", "BlazorTools.ObservableValues\BlazorTools.ObservableValues.csproj", "{7FB45AC4-1F51-4BD5-933C-A56253013F4B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BD2E30ED-C8F0-4425-A884-0508AF65DD3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD2E30ED-C8F0-4425-A884-0508AF65DD3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD2E30ED-C8F0-4425-A884-0508AF65DD3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD2E30ED-C8F0-4425-A884-0508AF65DD3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7FB45AC4-1F51-4BD5-933C-A56253013F4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7FB45AC4-1F51-4BD5-933C-A56253013F4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7FB45AC4-1F51-4BD5-933C-A56253013F4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7FB45AC4-1F51-4BD5-933C-A56253013F4B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

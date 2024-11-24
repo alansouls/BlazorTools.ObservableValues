@@ -1,0 +1,22 @@
+﻿@page "/"
+<div style="border: solid; padding: 2px">
+
+    <PageTitle>Home</PageTitle>
+
+    <p>Render count: @renderCount</p>
+
+    <h1>Hello, world!</h1>
+
+    Welcome to your new app.
+
+    <BlazorTools.ObservableValues.Sample1.Components.ParentComponent></BlazorTools.ObservableValues.Sample1.Components.ParentComponent>
+</div>
+
+@code{
+    private int renderCount = 0;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        renderCount++;
+    }
+}

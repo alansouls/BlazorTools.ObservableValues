@@ -1,14 +1,14 @@
-using BObservable.Values;
+using BlazorTools.ObservableValues.Values;
 
-namespace BObservable.Services;
+namespace BlazorTools.ObservableValues.Services;
 
-public class ValueManager : IValueManager, IInternalValueManager
+public class ValueManager : IValueManager, IValueManagerSetter
 {
     private readonly Dictionary<string, object> _valueBag = [];
-    
+
     private readonly Dictionary<string, Action<object>?> _valueChangedEvents = [];
 
-    void IInternalValueManager.SetValue<T>(string key, ObservableValue<T> value)
+    void IValueManagerSetter.SetValue<T>(string key, ObservableValue<T> value)
     {
         _valueBag[key] = value;
         _valueChangedEvents.GetValueOrDefault(key)?.Invoke(value);
@@ -26,7 +26,7 @@ public class ValueManager : IValueManager, IInternalValueManager
             _valueChangedEvents[key] += onChanged;
         }
     }
-    
+
     public void StopObservingValue(string key, Action<object> onChanged)
     {
         if (_valueChangedEvents.TryGetValue(key, out var action))

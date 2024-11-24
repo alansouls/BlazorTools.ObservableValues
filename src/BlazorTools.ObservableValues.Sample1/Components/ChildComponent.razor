@@ -1,0 +1,12 @@
+﻿@using BlazorTools.ObservableValues.Values
+<div style="border: solid; padding: 2px">
+    <h3>ChildComponent</h3>
+
+    <input type="text" @bind-value="value1.Value" />
+    <input type="text" @bind-value="value2.Value" />
+</div>
+
+@code {
+    private ObservableValue<string> value1 = new ObservableValue<string>("value-1");
+    private ObservableValue<string> value2 = new ObservableValue<string>("value-2");
+}

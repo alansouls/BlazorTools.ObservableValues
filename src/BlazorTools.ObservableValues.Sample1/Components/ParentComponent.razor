@@ -1,0 +1,36 @@
+﻿@using BlazorTools.ObservableValues.Components
+
+<div style="border: solid; padding: 2px">
+    <h3>ParentComponent</h3>
+
+    <p>Render count: @renderCount</p>
+    <label>Value1: </label>
+    <ValueObserver T="string" ValueKey="value-1">
+        <p>@context</p>
+    </ValueObserver>
+    <label>Value2: </label>
+    <ValueObserver T="string" ValueKey="value-2">
+        <p>@context</p>
+    </ValueObserver>
+
+    <ChildComponent></ChildComponent>
+
+    <button @onclick="Callback">Rerender parent</button>
+    @pressed
+
+</div>
+@code {
+    private int renderCount = 0;
+
+    private int pressed = 0;
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        renderCount++;
+    }
+
+    public void Callback()
+    {
+        pressed++;
+    }
+}
